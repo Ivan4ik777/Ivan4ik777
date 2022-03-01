@@ -1,0 +1,41 @@
+from turtle import *
+from random import *
+finish = 200
+def sss(t, x, y, color):
+    t.color(color)
+    t.shape('turtle')
+    t.penup()
+    t.goto(x, y)
+
+t1 = Turtle()
+#Програма котороя делает черепешьи гонки)
+t2 = Turtle()
+
+sss(t1, -200,-20, 'red')
+sss(t2, -200 ,20, 'blue')
+
+while t1.xcor() < finish and t2.xcor() < finish:
+    t1.forward(randint(2,7))
+    t2.forward(randint(2,7))
+
+max_2 = max(t1.xcor(), t2.xcor())
+
+
+def dance(t):
+    t1.speed(9)
+    t.left(randint(0, -90))
+
+j = 0
+while j < 8:
+    t1.penup()
+    t1.goto(0, 0)
+    t1.pendown()
+    i = 1
+    while i < 32:
+        t1.forward(i)
+        t1.left(i/2+5)
+        i += 1
+    j += 1
+
+t.penup()
+t.goto(0, 0)
