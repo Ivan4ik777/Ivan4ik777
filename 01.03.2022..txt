@@ -1,3 +1,4 @@
+#Програма которая устраивает черепашьи гонки)
 from turtle import *
 from random import *
 finish = 200
@@ -37,5 +38,5 @@ while j < 8:
         i += 1
     j += 1
 
-t.penup()
-t.goto(0, 0)
+t1.penup()
+t1.goto(0, 0)
