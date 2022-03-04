@@ -1,0 +1,7 @@
+#Програма высчитавыет средний баллю.
+total = 0
+count = int(input('Количество оценок:'))
+for i in range(count):
+    mark = int(input('Оценка:'))
+    total += mark
+print('Среднее:', total/count)
