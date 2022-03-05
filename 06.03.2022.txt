@@ -1,0 +1,15 @@
+#Програма выдаёт вам номер забега
+from random import randint
+
+race1_participants = 0
+race2_participants = 0
+
+while input('Выдать номер забега (off - стоп)?') != 'off':
+    number = randint(1,2)
+    print('Ваш номер', number)
+    if number == 1:
+        race1_participants +=1
+    else:
+        race2_participants +=1
+    print('Участников в первом забеге:', race1_participants)
+    print('Участников во втором забеге:', race2_participants)

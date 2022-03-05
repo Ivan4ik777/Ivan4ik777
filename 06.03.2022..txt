@@ -1,0 +1,9 @@
+#Програма выдаёт рандомный номер билета
+from random import randint
+win_number = 1010
+current_number = randint(1000, 3112)
+print('Номер лотерейного билета:', current_number)
+if current_number == win_number:
+    print('Вы выиграли ужин в ресторане!')
+else:
+    print('Повезёт в другой раз!')
