@@ -1,0 +1,36 @@
+#Игра пооймай черепашку
+from turtle import*  
+from time import sleep
+from random import randint 
+#Это модули
+
+t = Turtle()
+t.color('blue')
+t.penup()
+t.speed(100)
+t.shape('turtle')
+#Это объект черепашки
+
+w = 200
+h = 200
+
+def rand_move():
+    t.goto(randint(-w, w), randint(-h, h))
+#функция которая переносит черепашку в случайную точку
+
+t.points = 0
+def catch(x, y):
+    t.write('А!', font=('Arial', 14, 'normal'))
+    t.points +=  1
+    rand_move()
+#Функция которая обрабатывает клик по черепашке
+
+t.onclick(catch)
+#Это подписка на событие
+
+while t.points < 3:
+    sleep(1.5)
+    rand_move()
+t.write('WOW!', font=('Arial', 16, 'bold'))
+t.hideturtle()
+#Это цикл работающий пока кликов t.points меньше 3
